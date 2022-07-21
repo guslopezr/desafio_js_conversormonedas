@@ -15,13 +15,18 @@ body {
     background-color: $backgroundcolor;
 }
 
+#current_date {
+    color: $backgroundcolor;
+    font-size: 80%;
+}
+
 .container {
     background-color: $color2;
     margin: auto;
     width: 70%;
     border: 3px solid $color1;
     padding: 10px;
-    margin-top: 2%;
+    margin-top: 1%;
     text-align: center;
     h2 {
         text-align: center;
@@ -62,4 +67,9 @@ body {
     margin: auto;
     width: 40%;
     line-height: 40px;
+}
+
+.grafica {
+    width: 85%;
+    margin: 3%;
 }

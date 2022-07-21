@@ -8,6 +8,8 @@ const resultado = document.getElementById("valorconvertido");
 const tabla = document.getElementById("lista-usuario");
 const moneda = document.getElementById("moneda");
 
+document.getElementById("current_date").innerHTML = Date();
+
 const chartDOM = document.getElementById("myChart").getContext("2d");
 
 //Request a la API
@@ -25,11 +27,10 @@ async function getMonedas(urlAPI) {
     console.log(endpoint);
 }
 
-/*
- ****************************************************************************************
- */
+// Función para convertir USD y Euro
+
 async function convertir() {
-    if (clp.value == "") alert("Ingrese un monto válido");
+    if (clp.value == "" || isNaN(clp.value) || clp.value < 0.1) alert("Ingrese un monto válido");
     else {
         try {
             const divisas = await getMonedas(urlAPI);
@@ -49,11 +50,12 @@ async function convertir() {
 }
 
 
-//************************************************************************************************************* */
+// Función par cargar los datos en el gráfico
+
 async function cargarDatos(moneda) {
     const tipoDeGrafica = "line";
     const titulo = "Historico " + moneda.value.toUpperCase();
-    const colorDeLinea = "#" + randomHex(6) + "";
+    const colorDeLinea = "#" + randomHex(1) + "";
 
     const divisas = await getMonedas(urlAPI + "/" + moneda.value);
 
@@ -66,14 +68,14 @@ async function cargarDatos(moneda) {
             labels: fechas.reverse().slice(-10),
             datasets: [{ //Aqui cada objeto representa un indicador que sera visualizado en la grafica
                 label: titulo,
-                borderColor: "#" + randomHex(6) + "",
+                borderColor: "#" + randomHex(1) + "",
                 backgroundColor: colorDeLinea,
                 data: etiquetas.reverse().slice(-10),
             }, ],
         },
     };
 
-    //REfrescar el grafico
+    //Función para refrescar el grafico
 
     if (window.chartDOM) {
         window.chartDOM.clear();
