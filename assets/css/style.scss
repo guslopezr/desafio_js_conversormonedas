@@ -1,6 +1,7 @@
 $color1:grey;
 $color2:rgb(213, 213, 213);
 $buttoncolor:rgb(6, 213, 249);
+$buttonhover:rgb(136, 232, 249);
 $color3:rgb(240, 240, 240);
 $backgroundcolor:rgb(66, 66, 66);
 $mainfont: Verdana,
@@ -49,6 +50,10 @@ body {
     background-color: $buttoncolor;
     border-color: $buttoncolor;
     font-family: $mainfont;
+    &:hover {
+        background-color: $buttonhover;
+        border-color: $buttonhover;
+    }
 }
 
 .valorfinal {

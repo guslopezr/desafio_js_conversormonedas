@@ -8,11 +8,11 @@ const resultado = document.getElementById("valorconvertido");
 const tabla = document.getElementById("lista-usuario");
 const moneda = document.getElementById("moneda");
 
-const chartDOM = document.getElementById("myChart2").getContext("2d");
+const chartDOM = document.getElementById("myChart").getContext("2d");
 
 //Request a la API
 
-async function getMonedas(url) {
+async function getMonedas(urlAPI) {
     const endpoint = urlAPI;
     try {
         const res = await fetch(endpoint);
