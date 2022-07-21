@@ -1,0 +1,60 @@
+$color1:grey;
+$color2:rgb(213, 213, 213);
+$buttoncolor:rgb(6, 213, 249);
+$color3:rgb(240, 240, 240);
+$backgroundcolor:rgb(66, 66, 66);
+$mainfont: Verdana,
+Geneva,
+Tahoma,
+sans-serif;
+body {
+    font-family: $mainfont;
+    margin: 0%;
+    padding: 0%;
+    background-color: $backgroundcolor;
+}
+
+.container {
+    background-color: $color2;
+    margin: auto;
+    width: 70%;
+    border: 3px solid $color1;
+    padding: 10px;
+    margin-top: 2%;
+    text-align: center;
+    h2 {
+        text-align: center;
+    }
+    .container.input {
+        text-align: center;
+    }
+    .ingresepesos {
+        width: 40%;
+        line-height: 30px;
+        border-radius: 5%;
+    }
+    .monedaconvertir {
+        width: 40%;
+        line-height: 40px;
+        border-radius: 5%;
+        font-size: large;
+    }
+}
+
+#btnconvertir {
+    width: 40%;
+    line-height: 40px;
+    border-radius: 2%;
+    font-size: large;
+    background-color: $buttoncolor;
+    border-color: $buttoncolor;
+    font-family: $mainfont;
+}
+
+.valorfinal {
+    align-items: center;
+    background-color: $color3;
+    margin: auto;
+    width: 40%;
+    line-height: 40px;
+}

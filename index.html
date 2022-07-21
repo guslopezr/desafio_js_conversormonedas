@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <h2>Conversor de Monedas Nacional</h2>
+
+        <div class="container.input">
+            <h4>Pesos Chilenos</h4>
+            <input type="number" name="" id="pesoschilenos" class="ingresepesos" placeholder="Ingrese pesos chilenos" onkeypress="return valideKey(event);">
+
+            <p>Moneda a convertir</p>
+
+            <select name="" id="moneda" class="monedaconvertir" aria-placeholder="Seleccione moneda">
+            <option value="Dolar">Dolar</option>
+            <option value="Euro">Euros</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <div class="button">
+                <button id="btnconvertir" clas="btnconver" onclick="convertir()">Convertir Divisa</button>
+            </div>
+
+            <div class="valorfinal">
+
+                <p id="valorconvertido">
+                    ...
+
+                </p>
+
+            </div>
+            <div>
+                <h3>Divisas últimos 10 días</h3>
+                <div class="grafica">
+                    <canvas id="myChart"></canvas> </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="assets/js/index.js" async defer></script>
+</body>
+
+</html>
